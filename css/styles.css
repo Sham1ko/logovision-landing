@@ -44,7 +44,7 @@
   --bg-btn-secondary: #FFFFFF;
   --text-btn-secondary: rgb(0, 0, 0);
   --bg-btn-secondary: rgb(0, 0, 0);
-  --text-btn-secondary: #FFFFFF;
+  --text-btn-secondary: transparent;
 }
 
 *,
@@ -10929,7 +10929,7 @@ header.masthead h1, header.masthead .h1 {
   padding: 3rem;
 }
 .showcase .showcase-img {
-  min-height: 30rem;
+  min-height: 15rem;
   background-size: cover;
 }
 @media (min-width: 768px) {
@@ -10991,11 +10991,15 @@ footer.footer {
 header {
   padding-top: 9rem;
   padding-bottom: 9rem;
-  background: linear-gradient(87.73deg, #7D90A1 0.14%, #B8C6CF 61.6%);
+  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 143.58%),url(../assets/img/PHOTO.jpg) center  fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: contain;
 }
 
 #features{
-  background-color: #FFDA6E;
+  background-color: #f8f9fa !important;
 }
 
 .my-btn{
@@ -11013,4 +11017,12 @@ header {
 
 .my-btn-1{
   border-radius: 16px;
+}
+
+.bg-dark{
+  background: transparent !important;
+}
+
+.bg-dark.scrolled{
+  background: #000 !important;
 }

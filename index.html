@@ -13,21 +13,32 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">   
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
             <div class="container px-5">
                 <a class="navbar-brand" href="index.html">LogoVision</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#features">Возможности</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#suggestions">Предложения</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" role="button" aria-expanded="false">
+                                Решения
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Для проведения вебинаров</a></li>
+                                <a class="dropdown-item" href="#">Для образовательных учреждений/a>
+                                <a class="dropdown-item" href="#">Для внутреннего корпоративного образования</a>
+                                </ul>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="#about">О нас</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#features">Преимущества</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#pricing">Каталог</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
                     </ul>
                 </div>
@@ -39,14 +50,19 @@
             <div class="container px-5">
                 <div class="row gx-5 align-items-center justify-content-center">
                     <div class="col-xl-5 col-xxl-6  d-xl-block text-center order-xl-2">
-                        <img class="img-fluid rounded-3 my-5" src="assets/img/testimonials-4.jpg" alt="..." />
-                        <!-- <iframe width="600" height="400" src="https://www.youtube.com/watch?v=5qap5aO4i9A"></iframe> -->
-                        <!-- https://dummyimage.com/600x400/343a40/6c757d -->
+                        <!-- <img class="img-fluid rounded-3 my-5" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." /> -->
+                        
                     </div>
                     <div class="col-lg-8 col-xl-7 col-xxl-6 order-xl-1">
                         <div class="my-5 text-center text-xl-start">
-                            <h1 class="display-5 fw-bolder text-white mb-2">LogoVision Студия</h1>
-                            <p class="lead fw-normal text-white-50 mb-4">Наши студии спроектированы по принципу 1 человек - 1 кнопка, и действительно мы все продумали и сделали для вас. Для того, что бы начать онлайн урок, или запись лекции. Достаточно включить студию LogoVision нажать кнопку и урок начался!</p>
+                            <h1 class="display-5 fw-bolder text-white mb-2">Видеостудия LogoVision</h1>
+                            <p class="lead fw-normal text-white-50 mb-4">Комплексное решение задач видеопродакшена для:<br/>
+                                Образовательных учреждений и онлайн школ<br/>
+                                <span>Коммерческих организаций</span><br/>
+                                <span>Языковых центров</span><br/>
+                                <span>Спортивных школ</span><br/>
+                                <span>Бизнес-тренеров, организаторов вебинаров</span><br/>
+                                <span>Блогеров и создателей собственного контента</span></p>
                             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
                                 <a class="btn my-btn btn-lg px-4 me-sm-3" href="#contact">Заказать</a>
                                 <a class="btn my-btn-1 btn-outline-light btn-lg px-4" href="#features">Подробнее</a>
@@ -59,53 +75,39 @@
             </div>
         </header>
 
-        <!-- About section-->
-        <section id="about">
-            <div class="container px-4">
-                <div class="row gx-4">
-                    <div class="col-lg-12 col-xl-6 col-xxl-6">
-                        <h2>О нас</h2>
-                        <h4>Актуальная информация о компании
-                        </h4>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                        <a class="btn my-btn btn-lg px-5 me-sm-3" href="http://dnk.kz/home.html">Перейти на сайт</a>
-                    </div>
-                    <div class="col-lg-6 col-xl-6 col-xxl-6 d-none d-xl-block text-center">
-                        <img class="img-fluid rounded-3 my-5" src="assets/img/dnk.kz.JPG" alt="..." />
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="something">
+
+        
 
         <!-- features -->
 
         <section class="py-5" id="features">
-            <div class="container px-5 my-5">
+            <div class="container scroll px-5 my-5">
                 <div class="row gx-5">
-                    <div class="col-lg-4 mb-5 mb-lg-0"><h2 class="fw-bolder mb-0">Наши 4 преимущества.</h2></div>
+                    <div class="col-lg-4 mb-5 mb-lg-0"><h2 class="fw-bolder mb-0">Возможности студии.</h2></div>
                     <div class="col-lg-8">
                         <div class="row gx-5 row-cols-1 row-cols-md-2">
                             <div class="col mb-5 h-100">
-                                <div class="feature bg-light bg-gradient text-black rounded-3 mb-3"><i class="bi bi-record-circle"></i></div>
+                                <div class="feature bg-primary bg-gradient text-black rounded-3 mb-3"><i class="bi bi-record-circle"></i></div>
                                 <h2 class="h5">Запись</h2>
-                                <p class="mb-0">Запись видеоматериалов и лекций.</p>
+                                <p class="mb-0">Легкое и быстрое создание и запись презентаций, видеоуроков, онлайн-тренингов, демонстраций опытов.</p>
                             </div>
                             <div class="col mb-5 h-100">
                                 <div class="feature bg-light bg-gradient text-black rounded-3 mb-3"><i class="bi bi-camera"></i></div>
-                                <h2 class="h5">Несколько источников</h2>
-                                <p class="mb-0">Записывать все источники и камеры отдельно.</p>
+                                <h2 class="h5">Something</h2>
+                                <p class="mb-0">Накладка титров, фирменных “водяных” знаков, объектов дополненной реальности.</p>
 
                             </div>
                             <div class="col mb-5 mb-md-0 h-100">
                                 <div class="feature bg-light bg-gradient text-black rounded-3 mb-3"><i class="bi bi-camera-video"></i></div>
                                 <h2 class="h5">Прямой эфир</h2>
-                                <p class="mb-0">Выходить в прямой эфир на 3 ресурса одновременно, а при использования рестримингового сервиса на неограниченное количество каналов.</p>
+                                <p class="mb-0">Выход в прямой эфир одновременно на 3 любых хостинга или социальные сети.</p>
 
                             </div>
                             <div class="col h-100">
                                 <div class="feature bg-light bg-gradient text-black rounded-3 mb-3"><i class="bi bi-plus-circle"></i></div>
                                 <h2 class="h5">Дополнительный контент</h2>
-                                <p class="mb-0">Использовать дополнительный контент, будь то ролики, захват изображения микроскопа, телескопа и других образовательных приборов, презентации, Ip-камеры источники сигнала NDI из вашей сети.</p>
+                                <p class="mb-0">Использование дополнительного контента (ролики, захват изображения микроскопа, телескопа IP-камеры, источники сигнала NDI из вашей сети).</p>
                             </div>
                         </div>
                     </div>
@@ -142,27 +144,42 @@
             </div>
         </section> -->
         <!-- Image Showcases-->
-        <section class="showcase">
-            <div class="container-fluid p-0">
+        <section class="showcase" id="suggestions">
+            <div class="container-fluid scroll p-0">
+                <div class="container fw-bolder text-center h1 mb-5 mt-5">Наши Предложения</div>
                 <div class="row g-0">
-                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/camera.jpg')"></div>
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img mx-auto text-center justify-content-center" style="background-image: url('assets/img/camera.jpg');  background-position: center;
+                    ">
+                        
+                    </div>
                     <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                        <h2>Fully Responsive Design</h2>
-                        <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+                        <h2>Аренда студии</h2>
+                        <p class="lead mb-0">В вашем распоряжении все профессиональное оборудование и работа оператора, который поможет настроить вебинар или провести съёмку
+
+                            Постоянные скидки за объемы</p>
                     </div>
                 </div>
                 <div class="row g-0">
-                    <div class="col-lg-6 text-white showcase-img" style="background-image: url('assets/img/photo-board.jpg')"></div>
+                    <div class="col-lg-6 text-white showcase-img" style="background-image: url('assets/img/photo-board.jpg');  background-position: center;
+                    "></div>
                     <div class="col-lg-6 my-auto showcase-text">
-                        <h2>Updated For Bootstrap 5</h2>
-                        <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 5 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 5!</p>
+                        <h2>Прозрачная доска</h2>
+                        <p class="lead mb-0">Используется для съемок, а также как флипчарт в помещении. Бывает настольная и напольная. Маркеры в подарок. 
+                        </p>
                     </div>
                 </div>
                 <div class="row g-0">
-                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/live-tv-2.png')"></div>
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/live-tv-2.png');  background-position: center;
+                    "></div>
                     <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                        <h2>Easy to Use & Customize</h2>
-                        <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
+                        <h2>Видеостудия под ключ</h2>
+                        <p class="lead mb-0">Программно-аппаратный комплекс,
+
+                            настройка, обучение и техподдержка.
+                            
+                            Автоматизированный процесс съёмки. 
+                            
+                            Легко проводить прямые трансляции и вебинары.</p>
                     </div>
                 </div>
             </div>
@@ -171,17 +188,69 @@
         <!-- Pricing -->
 
         <section class="bg-light py-5" id="pricing">
-            <div class="container px-5 my-5">
+            <div class="container scroll px-5 my-5">
+                
                 <div class="text-center mb-5">
-                    <h1 class="fw-bolder">Pay as you grow</h1>
-                    <p class="lead fw-normal text-muted mb-0">With our no hassle pricing plans</p>
+                    <h1 class="fw-bolder">Решения</h1>
+                    <!-- <p class="lead fw-normal text-muted mb-0">With our no hassle pricing plans</p> -->
                 </div>
                 <div class="row gx-5 justify-content-center">
                     <!-- Pricing card free-->
-                    <div class="col-lg-6 col-xl-4">
+                    
+                    <!-- Pricing card pro-->
+                    <div class="col-lg-6 col-xl-4 order-lg-2">
                         <div class="card mb-5 mb-xl-0">
                             <div class="card-body p-5">
-                                <div class="small text-uppercase fw-bold text-muted">LogoVision MINI CLASSIC</div>
+                                <div class="small text-uppercase fw-bold">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    Для образовательных учреждений
+                                </div>
+                                <div class="mb-3">
+                                    <span class="display-4 fw-bold">$9</span>
+                                    <span class="text-muted">/ mo.</span>
+                                </div>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        <strong>5 users</strong>
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        5GB storage
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Unlimited public projects
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Community access
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Unlimited private projects
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Dedicated support
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Free linked domain
+                                    </li>
+                                    <li class="text-muted">
+                                        <i class="bi bi-x"></i>
+                                        Monthly status reports
+                                    </li>
+                                </ul>
+                                <div class="d-grid"><a class="btn btn-outline-primary" href="#contact">Choose plan</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4 order-lg-1">
+                        <div class="card mb-5 mb-xl-0">
+                            <div class="card-body p-5">
+                                <div class="small text-uppercase fw-bold text-muted">Для проведения вебинаров</div>
                                 <div class="mb-3">
                                     <span class="display-4 fw-bold">$0</span>
                                     <span class="text-muted">/ mo.</span>
@@ -226,61 +295,11 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Pricing card pro-->
-                    <div class="col-lg-6 col-xl-4">
-                        <div class="card mb-5 mb-xl-0">
-                            <div class="card-body p-5">
-                                <div class="small text-uppercase fw-bold">
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    LogoVision MEDIUM CLASSIC
-                                </div>
-                                <div class="mb-3">
-                                    <span class="display-4 fw-bold">$9</span>
-                                    <span class="text-muted">/ mo.</span>
-                                </div>
-                                <ul class="list-unstyled mb-4">
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        <strong>5 users</strong>
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        5GB storage
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        Unlimited public projects
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        Community access
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        Unlimited private projects
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        Dedicated support
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        Free linked domain
-                                    </li>
-                                    <li class="text-muted">
-                                        <i class="bi bi-x"></i>
-                                        Monthly status reports
-                                    </li>
-                                </ul>
-                                <div class="d-grid"><a class="btn btn-outline-primary" href="#contact">Choose plan</a></div>
-                            </div>
-                        </div>
-                    </div>
                     <!-- Pricing card enterprise-->
-                    <div class="col-lg-6 col-xl-4">
+                    <div class="col-lg-6 col-xl-4 order-lg-3">
                         <div class="card">
                             <div class="card-body p-5">
-                                <div class="small text-uppercase fw-bold text-muted">LogoVision MEDIUM NDI</div>
+                                <div class="small text-uppercase fw-bold text-muted">Для внутреннего корпоративного образования</div>
                                 <div class="mb-3">
                                     <span class="display-4 fw-bold">$49</span>
                                     <span class="text-muted">/ mo.</span>
@@ -356,17 +375,35 @@
                 </div>
             </div>
         </section> -->
+
+        <!-- About section-->
+        <section id="about">
+            <div class="container scroll px-4">
+                <div class="row gx-4">
+                    <div class="col-lg-12 col-xl-6 col-xxl-6">
+                        <h2>О нас</h2>
+                        <h4>Актуальная информация о компании
+                        </h4>
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        <a class="btn my-btn btn-lg px-5 me-sm-3" href="http://dnk.kz/home.html">Перейти на сайт</a>
+                    </div>
+                    <div class="col-lg-6 col-xl-6 col-xxl-6 d-none d-xl-block text-center">
+                        <img class="img-fluid rounded-3 my-5" src="assets/img/dnk.kz.JPG" alt="..." />
+                    </div>
+                </div>
+            </div>
+        </section>
        
         <!-- Contact form -->
 
         <section class="py-5" id="contact">
-            <div class="container px-5">
+            <div class="container scroll px-5">
                 <!-- Contact form-->
                 <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
                     <div class="text-center mb-5">
-                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
+                        <div class="feature bg-gradient my-btn text-black-50 rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
                         <h1 class="fw-bolder">Свяжитесь с нами</h1>
-                        <p class="lead fw-normal text-muted mb-0">We'd love to hear from you</p>
+                        <!-- <p class="lead fw-normal text-muted mb-0">We'd love to hear from you</p> -->
                     </div>
                     <div class="row gx-5 justify-content-center">
                         <div class="col-lg-8 col-xl-6">
@@ -379,20 +416,20 @@
                                 <!-- Email address input-->
                                 <div class="form-floating mb-3">
                                     <input class="form-control" id="email" type="email" placeholder="name@example.com" name="Email" required />
-                                    <label for="email">Email address</label>
+                                    <label for="email">Электронная почта</label>
                                 </div>
                                 <!-- Phone number input-->
                                 <div class="form-floating mb-3">
                                     <input class="form-control" id="phone" type="text" placeholder="(123) 456-7890" name="Phone" required />
-                                    <label for="phone">Phone number</label>
+                                    <label for="phone">Номер телефона</label>
                                 </div>
                                 <!-- Message input-->
                                 <div class="form-floating mb-3">
                                     <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." name="Message" required style="height: 10rem" ></textarea>
-                                    <label for="message">Message</label>
+                                    <label for="message">Текст письма</label>
                                 </div>
                                 <!-- Submit Button-->
-                                <div class="d-grid"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">Отправить</button></div>
+                                <div class="d-grid"><button class="btn my-btn btn-lg" id="submitButton" type="submit">Отправить</button></div>
                             </form>
                         </div>
                     </div>
@@ -422,6 +459,7 @@
             form.addEventListener("submit", handleSubmit)
         </script>
 
+        </div>
 
         <!-- Footer-->
         <footer class="footer bg-light">
@@ -441,8 +479,14 @@
                     </div>
                     <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
                         <ul class="list-inline mb-0">
-                            <li class="list-inline-item me-4">
-                                <a href="https://www.youtube.com/user/TVProland"><i class="bi-youtube text-dark fs-3"></i></a>
+                            <li class="list-inline-item">
+                                <a href=""><i class="bi-facebook text-dark fs-3"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href=""><i class="bi-whatsapp text-dark fs-3"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href=""><i class="bi-youtube text-dark fs-3"></i></a>
                             </li>
                             <li class="list-inline-item">
                                 <a href="https://www.instagram.com/logovision.kz/"><i class="bi-instagram text-dark fs-3"></i></a>
@@ -452,10 +496,48 @@
                 </div>
             </div>
         </footer>
+     
+        <!-- whatsapp button -->
+
+        <a href="https://api.whatsapp.com/send?
+         phone=87773623208
+         &text=Shamiko."
+   		 class="float" target="_blank"><i class="fa fa-whatsapp my-float"></i></a>
+
+
+            <style>
+                .float{
+                    position:fixed;
+                    width:60px;
+                    height:60px;
+                    bottom:40px;
+                    right:40px;
+                    background-color:#25d366;
+                    color:#FFF;
+                    border-radius:50px;
+                    text-align:center;
+                  font-size:30px;
+                    box-shadow: 2px 2px 3px #999;
+                  z-index:100;
+                }
+                
+                .my-float{
+                    margin-top:16px;
+                }
+                 </style>
+     
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <!-- jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- Navbar change color -->
+        <script>
+            $(window).scroll(function(){
+                $('nav').toggleClass('scrolled', $(this).scrollTop()>744);
+            });
+        </script>
     </body>
 </html>
