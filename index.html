@@ -28,13 +28,13 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#features">Возможности</a></li>
                         <li class="nav-item"><a class="nav-link" href="#suggestions">Предложения</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <li class="nav-item2 dropdown">
+                            <a class=" dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown" role="button" aria-expanded="false">
                                 Решения
-                              </a>
+                            </a>
                               <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Для проведения вебинаров</a></li>
-                                <a class="dropdown-item" href="#">Для образовательных учреждений/a>
+                                <a class="dropdown-item" href="#">Для проведения вебинаров</a>
+                                <a class="dropdown-item" href="#">Для образовательных учреждений</a>
                                 <a class="dropdown-item" href="#">Для внутреннего корпоративного образования</a>
                                 </ul>
                         </li>
@@ -44,9 +44,10 @@
                 </div>
             </div>
         </nav>
+        
 
         <!-- Header -->
-        <header class="py-7">
+        <header class="">
             <div class="container px-5">
                 <div class="row gx-5 align-items-center justify-content-center">
                     <div class="col-xl-5 col-xxl-6  d-xl-block text-center order-xl-2">
@@ -75,6 +76,8 @@
             </div>
         </header>
 
+       
+
         <div class="something">
 
         
@@ -88,7 +91,7 @@
                     <div class="col-lg-8">
                         <div class="row gx-5 row-cols-1 row-cols-md-2">
                             <div class="col mb-5 h-100">
-                                <div class="feature bg-primary bg-gradient text-black rounded-3 mb-3"><i class="bi bi-record-circle"></i></div>
+                                <div class="feature bg-light bg-gradient text-black rounded-3 mb-3"><i class="bi bi-record-circle"></i></div>
                                 <h2 class="h5">Запись</h2>
                                 <p class="mb-0">Легкое и быстрое создание и запись презентаций, видеоуроков, онлайн-тренингов, демонстраций опытов.</p>
                             </div>
@@ -169,7 +172,7 @@
                     </div>
                 </div>
                 <div class="row g-0">
-                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/live-tv-2.png');  background-position: center;
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/webinar.jpg');  background-position: center;
                     "></div>
                     <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                         <h2>Видеостудия под ключ</h2>
@@ -200,14 +203,12 @@
                     <!-- Pricing card pro-->
                     <div class="col-lg-6 col-xl-4 order-lg-2">
                         <div class="card mb-5 mb-xl-0">
+                            <img src="./assets/img/education.jpg" class="card-img-top" alt="">
+
                             <div class="card-body p-5">
                                 <div class="small text-uppercase fw-bold">
                                     <i class="bi bi-star-fill text-warning"></i>
                                     Для образовательных учреждений
-                                </div>
-                                <div class="mb-3">
-                                    <span class="display-4 fw-bold">$9</span>
-                                    <span class="text-muted">/ mo.</span>
                                 </div>
                                 <ul class="list-unstyled mb-4">
                                     <li class="mb-2">
@@ -249,12 +250,9 @@
                     </div>
                     <div class="col-lg-6 col-xl-4 order-lg-1">
                         <div class="card mb-5 mb-xl-0">
+                            <img src="./assets/img/webinar2.jpg " class="card-img-top" alt="">
                             <div class="card-body p-5">
                                 <div class="small text-uppercase fw-bold text-muted">Для проведения вебинаров</div>
-                                <div class="mb-3">
-                                    <span class="display-4 fw-bold">$0</span>
-                                    <span class="text-muted">/ mo.</span>
-                                </div>
                                 <ul class="list-unstyled mb-4">
                                     <li class="mb-2">
                                         <i class="bi bi-check text-primary"></i>
@@ -298,12 +296,9 @@
                     <!-- Pricing card enterprise-->
                     <div class="col-lg-6 col-xl-4 order-lg-3">
                         <div class="card">
+                            <img src="./assets/img/corporate2.jpg " class="card-img-top" alt="">
                             <div class="card-body p-5">
                                 <div class="small text-uppercase fw-bold text-muted">Для внутреннего корпоративного образования</div>
-                                <div class="mb-3">
-                                    <span class="display-4 fw-bold">$49</span>
-                                    <span class="text-muted">/ mo.</span>
-                                </div>
                                 <ul class="list-unstyled mb-4">
                                     <li class="mb-2">
                                         <i class="bi bi-check text-primary"></i>
@@ -498,10 +493,11 @@
         </footer>
      
         <!-- whatsapp button -->
-
+        <!-- https://chatwith.io/s/sham -->
         <a href="https://api.whatsapp.com/send?
-         phone=87773623208
+         phone=+77086252643
          &text=Shamiko."
+         
    		 class="float" target="_blank"><i class="fa fa-whatsapp my-float"></i></a>
 
 
@@ -538,6 +534,12 @@
             $(window).scroll(function(){
                 $('nav').toggleClass('scrolled', $(this).scrollTop()>744);
             });
+            $(window).scroll(function(){
+                $('dropdown').toggleClass('scrolled', $(this).scrollTop()>744);
+            });
+            if ($('div.collapse').hasClass('show')){
+             $(this).children('navbar-nav').toggleClass('menuB');
+            }
         </script>
     </body>
 </html>
