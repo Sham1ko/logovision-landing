@@ -3499,7 +3499,7 @@ textarea.form-control-lg {
   list-style: none;
   background-color: transparent;
   background-clip: padding-box;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
 }
 .dropdown-menu[data-bs-popper] {
@@ -11044,9 +11044,7 @@ header {
 }
 
 .show{
-  background-color: #000;
   transition: var(--transition-speed);
-  border: solid 1px #fff;
 }
 
 .dropdown-toggle{

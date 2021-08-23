@@ -59,13 +59,14 @@
                     <div class="col-lg-8 col-xl-7 col-xxl-6 order-xl-1">
                         <div class="my-5 text-center text-xl-start">
                             <h1 class="display-5 fw-bolder text-white mb-2">Видеостудия LogoVision</h1>
-                            <p class="lead fw-normal text-white-50 mb-4">Комплексное решение задач видеопродакшена для:<br/>
-                                Образовательных учреждений и онлайн школ<br/>
-                                <span>Коммерческих организаций</span><br/>
-                                <span>Языковых центров</span><br/>
-                                <span>Спортивных школ</span><br/>
-                                <span>Бизнес-тренеров, организаторов вебинаров</span><br/>
-                                <span>Блогеров и создателей собственного контента</span></p>
+                            <p class="lead text-white-50 mb-4">Комплексное решение задач видеопродакшена для:<br/>
+                                <span style="font-size: 15px;margin-left: 20px;">Образовательных учреждений и онлайн школ</span><br/>
+                                <span style="font-size: 15px;margin-left: 20px;">Коммерческих организаций</span><br/>
+                                <span style="font-size: 15px;margin-left: 20px;">Языковых центров</span><br/>
+                                <span style="font-size: 15px;margin-left: 20px;">Спортивных школ</span><br/>
+                                <span style="font-size: 15px;margin-left: 20px;">Бизнес-тренеров, организаторов вебинаров</span><br/>
+                                <span style="font-size: 15px;margin-left: 20px;">Блогеров и создателей собственного контента</span>
+                            </p>
                             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
                                 <a class="btn my-btn btn-lg px-4 me-sm-3" href="#contact">Заказать</a>
                                 <a class="btn my-btn-1 btn-outline-light btn-lg px-4" href="#features">Подробнее</a>
@@ -161,8 +162,12 @@
                     <div class="col-lg-6 order-lg-1 my-auto showcase-text" id="rent">
                         <h2>Аренда студии</h2>
                         <p class="lead mb-0">В вашем распоряжении все профессиональное оборудование и работа оператора, который поможет настроить вебинар или провести съёмку
-
+<br/>
                             Постоянные скидки за объемы</p>
+                            <a class="btn my-btn btn-lg px-4 my-4 me-sm-3" data-bs-toggle="modal" data-bs-target="#rentModal">Арендовать</a>
+                            <a class="btn my-btn btn-lg px-4 my-4 me-sm-3" data-bs-toggle="modal" data-bs-target="#rentModalSkidka">Получить скидку</a>
+
+
                     </div>
                 </div>
                 <div class="row g-0">
@@ -174,6 +179,8 @@
                         <h2>Прозрачная доска</h2>
                         <p class="lead mb-0">Используется для съемок, а также как флипчарт в помещении. Бывает настольная и напольная. Маркеры в подарок. 
                         </p>
+                        <a class="btn my-btn btn-lg px-4 my-4 me-sm-3" data-bs-toggle="modal" data-bs-target="#buyModal">купить</a>
+
                     </div>
                 </div>
                 <div class="row g-0">
@@ -191,10 +198,183 @@
                             Автоматизированный процесс съёмки. 
                             
                             Легко проводить прямые трансляции и вебинары.</p>
+                            <a class="btn my-btn btn-lg px-4 my-4 me-sm-3" data-bs-toggle="modal" data-bs-target="#studioModal">Выбрать комплектацию студии</a>
+
                     </div>
                 </div>
             </div>
         </section>
+<!-- Modals -->
+        <div class="modal fade" id="rentModal" tabindex="-1" aria-labelledby="rentModal" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Аренда</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm" action="https://formspree.io/f/mrgradrz" method="POST">
+                        <!-- Name input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="name" type="text" placeholder="Enter your name..." name="Name" required />
+                            <label for="name">ФИО</label>
+                        </div>
+                        <!-- Email address input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="email" type="email" placeholder="name@example.com" name="Email" required />
+                            <label for="email">Электронная почта</label>
+                        </div>
+                        <!-- Phone number input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="phone" type="text" placeholder="(123) 456-7890" name="Phone" required />
+                            <label for="phone">Номер телефона</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="phone" type="text" value="Аренда" placeholder="(123) 456-7890" name="Услуга" required style="display: none;"/>
+                            <label for="phone">Номер телефона</label>
+                        </div>
+                        <!-- Message input-->
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." name="Message" required style="height: 10rem" ></textarea>
+                            <label for="message">Текст письма</label>
+                        </div>
+                        <!-- Submit Button-->
+                        <div class="d-grid"><button class="btn my-btn btn-lg" id="submitButton" type="submit">Отправить</button></div>
+                    </form>
+                </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="modal fade" id="rentModalSkidka" tabindex="-1" aria-labelledby="rentModal" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Аренда</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm" action="https://formspree.io/f/mrgradrz" method="POST">
+                        <!-- Name input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="name" type="text" placeholder="Enter your name..." name="Name" required />
+                            <label for="name">ФИО</label>
+                        </div>
+                        <!-- Email address input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="email" type="email" placeholder="name@example.com" name="Email" required />
+                            <label for="email">Электронная почта</label>
+                        </div>
+                        <!-- Phone number input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="phone" type="text" placeholder="(123) 456-7890" name="Phone" required />
+                            <label for="phone">Номер телефона</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="phone" type="text" value="Аренда со скидкой" placeholder="(123) 456-7890" name="Услуга" required style="display: none;"/>
+                            <label for="phone">Номер телефона</label>
+                        </div>
+                        <!-- Message input-->
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." name="Message" required style="height: 10rem" ></textarea>
+                            <label for="message">Текст письма</label>
+                        </div>
+                        <!-- Submit Button-->
+                        <div class="d-grid"><button class="btn my-btn btn-lg" id="submitButton" type="submit">Отправить</button></div>
+                    </form>
+                </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="modal fade" id="buyModal" tabindex="-1" aria-labelledby="rentModal" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Свяжитесь с нами</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm" action="https://formspree.io/f/mrgradrz" method="POST">
+                        <!-- Name input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="name" type="text" placeholder="Enter your name..." name="Name" required />
+                            <label for="name">ФИО</label>
+                        </div>
+                        <!-- Email address input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="email" type="email" placeholder="name@example.com" name="Email" required />
+                            <label for="email">Электронная почта</label>
+                        </div>
+                        <!-- Phone number input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="phone" type="text" placeholder="(123) 456-7890" name="Phone" required />
+                            <label for="phone">Номер телефона</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="phone" type="text" value="Покупка" placeholder="(123) 456-7890" name="Услуга" required style="display: none;"/>
+                            <label for="phone">Номер телефона</label>
+                        </div>
+                        <!-- Message input-->
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." name="Message" required style="height: 10rem" ></textarea>
+                            <label for="message">Текст письма</label>
+                        </div>
+                        <!-- Submit Button-->
+                        <div class="d-grid"><button class="btn my-btn btn-lg" id="submitButton" type="submit">Отправить</button></div>
+                    </form>
+                </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="modal fade" id="studioModal" tabindex="-1" aria-labelledby="rentModal" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Свяжитесь с нами</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm" action="https://formspree.io/f/mrgradrz" method="POST">
+                        <!-- Name input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="name" type="text" placeholder="Enter your name..." name="Name" required />
+                            <label for="name">ФИО</label>
+                        </div>
+                        <!-- Email address input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="email" type="email" placeholder="name@example.com" name="Email" required />
+                            <label for="email">Электронная почта</label>
+                        </div>
+                        <!-- Phone number input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="phone" type="text" placeholder="(123) 456-7890" name="Phone" required />
+                            <label for="phone">Номер телефона</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="phone" type="text" value="комплектация студии" placeholder="(123) 456-7890" name="Услуга" required style="display: none;"/>
+                            <label for="phone">Номер телефона</label>
+                        </div>
+                        <!-- Message input-->
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." name="Message" required style="height: 10rem" ></textarea>
+                            <label for="message">Текст письма</label>
+                        </div>
+                        <!-- Submit Button-->
+                        <div class="d-grid"><button class="btn my-btn btn-lg" id="submitButton" type="submit">Отправить</button></div>
+                    </form>
+                </div>
+            </div>
+          </div>
+          </div>
+
+
+
 
         <!-- Pricing -->
 
@@ -211,7 +391,8 @@
                     <!-- Pricing card pro-->
                     <div class="col-lg-6 col-xl-4 order-lg-2">
                         <div class="card mb-5 mb-xl-0">
-                            <img src="./assets/img/education.jpg" class="card-img-top" alt="">
+                            <!-- <img src="./assets/img/education.jpg" class="card-img-top" alt=""> -->
+                            <iframe class="card-img-top" height="280" src="https://www.youtube.com/embed/99SsXhPtxqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                             <div class="card-body p-5">
                                 <div class="small text-uppercase fw-bold">
@@ -260,8 +441,8 @@
                         <div class="card mb-5 mb-xl-0">
                             <img src="./assets/img/webinar2.jpg " class="card-img-top" alt="">
                             <div class="card-body p-5">
-                                <div class="small text-uppercase fw-bold text-muted">Для проведения вебинаров</div>
-                                <ul class="list-unstyled mb-4">
+                                <div class="small text-uppercase fw-bold text-muted">Для проведения <br/> вебинаров</div>
+                                <!-- <ul class="list-unstyled mb-4">
                                     <li class="mb-2">
                                         <i class="bi bi-check text-primary"></i>
                                         <strong> Настольная вертикальная доска 100×65. Рисование, письмо.
@@ -296,7 +477,7 @@
                                         <i class="bi bi-x"></i>
                                         Monthly status reports
                                     </li>
-                                </ul>
+                                </ul> -->
                                 <div class="d-grid"><a class="btn my-btn" href="#contact">Выбрать план</a></div>
                             </div>
                         </div>
@@ -307,7 +488,7 @@
                             <img src="./assets/img/corporate2.jpg " class="card-img-top" alt="">
                             <div class="card-body p-5">
                                 <div class="small text-uppercase fw-bold text-muted">Для внутреннего корпоративного образования</div>
-                                <ul class="list-unstyled mb-4">
+                                <!-- <ul class="list-unstyled mb-4">
                                     <li class="mb-2">
                                         <i class="bi bi-check text-primary"></i>
                                         <strong>Unlimited users</strong>
@@ -341,7 +522,7 @@
                                         <i class="bi bi-check text-primary"></i>
                                         Monthly status reports
                                     </li>
-                                </ul>
+                                </ul> -->
                                 <div class="d-grid"><a class="btn my-btn" href="#contact">Выбрать план</a></div>
                             </div>
                         </div>
@@ -380,7 +561,7 @@
         </section> -->
 
         <!-- About section-->
-        <section id="about">
+        <!-- <section id="about">
             <div class="container scroll px-4">
                 <div class="row gx-4">
                     <div class="col-lg-12 col-xl-6 col-xxl-6">
@@ -395,7 +576,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
        
         <!-- Contact form -->
 
@@ -424,10 +605,6 @@
                                 <!-- Phone number input-->
                                 <div class="form-floating mb-3">
                                     <input class="form-control" id="phone" type="text" placeholder="(123) 456-7890" name="Phone" required />
-                                    <label for="phone">Номер телефона</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input class="form-control" id="phone" type="text" value="корп образование" placeholder="(123) 456-7890" name="Phone" required style="display: none;"/>
                                     <label for="phone">Номер телефона</label>
                                 </div>
                                 <!-- Message input-->
