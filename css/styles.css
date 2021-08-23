@@ -10993,7 +10993,7 @@ footer.footer {
 header {
   padding-top: 9rem;
   padding-bottom: 9rem;
-  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 143.58%),url(../assets/img/photo1.jpg) no-repeat center fixed;
+  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 143.58%),url(../assets/img/photo2.jpg) no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
