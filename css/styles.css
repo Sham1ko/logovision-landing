@@ -7465,9 +7465,6 @@ textarea.form-control-lg {
   background-color: #f8f9fa !important;
 }
 
-.bg-dark {
-  background-color: #212529 !important;
-}
 
 .bg-body {
   background-color: #fff !important;
@@ -11000,9 +10997,6 @@ header {
   background-size: cover;
 }
 
-#features{
-  background-color: #f8f9fa !important;
-}
 
 .my-btn{
   background-color: #FFDA6E;
@@ -11019,10 +11013,6 @@ header {
 
 .my-btn-1{
   border-radius: 16px;
-}
-
-.bg-dark{
-  background: transparent !important;
 }
 
 .bg-dark.scrolled{
@@ -11049,4 +11039,33 @@ header {
 
 .dropdown-toggle{
   border: none;
+}
+
+.text-justify{
+  text-align: justify;
+}
+
+.bg-sm {
+  background: #000 !important;
+}
+
+@media (min-width: 576px) {
+  .bg-sm {
+    background: #000 !important;
+  }
+}
+@media (min-width: 992px) {
+  .bg-dark{
+    background: transparent !important;
+  }
+}
+@media (min-width: 1200px) {
+  .bg-dark{
+    background: transparent !important;
+  }
+}
+@media (min-width: 1400px) {
+  .bg-dark{
+    background: transparent !important;
+  }
 }
