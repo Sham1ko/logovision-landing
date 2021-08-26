@@ -35,9 +35,9 @@
                                 Решения
                             </a>
                               <ul class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Для проведения вебинаров</a>
-                                <a class="dropdown-item" href="#">Для образовательных учреждений</a>
-                                <a class="dropdown-item" href="#">Для внутреннего корпоративного образования</a>
+                                <a class="dropdown-item" href="#webinar">Для проведения вебинаров</a>
+                                <a class="dropdown-item" href="#education">Для образовательных учреждений</a>
+                                <a class="dropdown-item" href="#corpedu">Для внутреннего корпоративного образования</a>
                                 </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="#about">О нас</a></li>
@@ -165,11 +165,11 @@
                     </div>
                     <div class="col-lg-6 order-lg-1 my-auto showcase-text" id="rent">
                         <h2>Аренда студии</h2>
-                        <p class="text-justify mb-0">В вашем распоряжении все профессиональное оборудование и работа оператора, который поможет настроить вебинар или провести съёмку
+                        <p class="text-justify mb-0">В вашем распоряжении все профессиональное оборудование и работа оператора, который поможет настроить вебинар или провести съёмку.
 <br/>
-                            Постоянные скидки за объемы</p>
-                            <a class="btn my-btn btn-lg px-4 my-4 me-sm-3" data-bs-toggle="modal" data-bs-target="#rentModal">Арендовать</a>
-                            <a class="btn my-btn btn-lg px-4 my-4 me-sm-3" data-bs-toggle="modal" data-bs-target="#rentModalSkidka">Получить скидку</a>
+                            Постоянные скидки за объемы.</p>
+                            <a class="btn my-btn btn-lg px-4 my-sm-2 my-2 my-md-2 my-xl-4 my-lg-2 me-sm-3" data-bs-toggle="modal" data-bs-target="#rentModal">Арендовать</a>
+                            <a class="btn my-btn btn-lg px-4 my-sm-2 my-2 my-md-2 my-xl-4 my-lg-4 me-sm-3" data-bs-toggle="modal" data-bs-target="#rentModalSkidka">Получить скидку</a>
 
 
                     </div>
@@ -196,7 +196,7 @@
                     <div class="col-lg-6 order-lg-1 my-auto showcase-text" id="video-studio">
                         <h2>Видеостудия под ключ</h2>
                         <p class="text-justify mb-0">
-                            Комплексная, многофункциональная трибуна для спикера!
+                            Комплексная, многофункциональная трибуна для спикера.
                             Настройка, обучение и техподдержка.
                             Автоматизированный процесс съёмки.
                             Легко проводить прямые трансляции и вебинары.
@@ -217,7 +217,7 @@
 
                 </div>
                 <div class="modal-body">
-                    <form id="contactForm" action="https://formspree.io/f/mrgradrz" method="POST">
+                    <form id="modalForm" action="https://formspree.io/f/meqvpyea" method="POST">
                         <!-- Name input-->
                         <div class="form-floating mb-3">
                             <input class="form-control" id="name" type="text" placeholder="Enter your name..." name="Name" required />
@@ -259,7 +259,7 @@
 
                 </div>
                 <div class="modal-body">
-                    <form id="contactForm" action="https://formspree.io/f/mrgradrz" method="POST">
+                    <form id="modalForm" action="https://formspree.io/f/meqvpyea" method="POST">
                         <!-- Name input-->
                         <div class="form-floating mb-3">
                             <input class="form-control" id="name" type="text" placeholder="Enter your name..." name="Name" required />
@@ -301,7 +301,7 @@
 
                 </div>
                 <div class="modal-body">
-                    <form id="contactForm" action="https://formspree.io/f/mrgradrz" method="POST">
+                    <form id="modalForm" action="https://formspree.io/f/meqvpyea" method="POST">
                         <!-- Name input-->
                         <div class="form-floating mb-3">
                             <input class="form-control" id="name" type="text" placeholder="Enter your name..." name="Name" required />
@@ -343,7 +343,7 @@
 
                 </div>
                 <div class="modal-body">
-                    <form id="contactForm" action="https://formspree.io/f/mrgradrz" method="POST">
+                    <form id="modalForm" action="https://formspree.io/f/meqvpyea" method="POST">
                         <!-- Name input-->
                         <div class="form-floating mb-3">
                             <input class="form-control" id="name" type="text" placeholder="Enter your name..." name="Name" required />
@@ -371,11 +371,55 @@
                         <!-- Submit Button-->
                         <div class="d-grid"><button class="btn my-btn btn-lg" id="submitButton" type="submit">Отправить</button></div>
                     </form>
+                    <script>
+                        var form = document.getElementById("modalForm");
+                        
+                        async function handleSubmit(event) {
+                          event.preventDefault();
+                          var status = document.getElementById("submitButton");
+                          var data = new FormData(event.target);
+                          fetch(event.target.action, {
+                            method: form.method,
+                            body: data,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                          }).then(response => {
+                            status.innerHTML = "Спасибо! Мы вам позвоним.";
+                            form.reset()
+                          }).catch(error => {
+                            status.innerHTML = "Упс! Возникли проблемы с отправкой формы."
+                          });
+                        }
+                        form.addEventListener("submit", handleSubmit)
+                    </script>
                 </div>
             </div>
           </div>
           </div>
 
+          <script>
+            var form = document.getElementById("modalForm");
+            
+            async function handleSubmit(event) {
+              event.preventDefault();
+              var status = document.getElementById("submitButton");
+              var data = new FormData(event.target);
+              fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+              }).then(response => {
+                status.innerHTML = "Спасибо! Мы вам позвоним.";
+                form.reset()
+              }).catch(error => {
+                status.innerHTML = "Упс! Возникли проблемы с отправкой формы."
+              });
+            }
+            form.addEventListener("submit", handleSubmit)
+        </script>
 
 
 
@@ -392,7 +436,7 @@
                     <!-- Pricing card free-->
                     
                     <!-- Pricing card pro-->
-                    <div class="col-lg-6 col-xl-4 order-lg-2">
+                    <div class="col-lg-6 col-xl-4 order-lg-2" id="education">
                         <div class="card mb-5 mb-xl-0">
                             <!-- <img src="./assets/img/education.jpg" class="card-img-top" alt=""> -->
                             <iframe class="card-img-top" height="280" src="https://www.youtube.com/embed/99SsXhPtxqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -402,10 +446,72 @@
                                     <i class="bi bi-star-fill text-warning"></i>
                                     Для образовательных учреждений
                                 </div>
-                                <ul class="list-unstyled mb-4">
+                                <ul class="list-unstyled mb-4 text-justify">
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Создавайте видеокурсы профессионального качества без помощи ассистента.
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Проводите занятия в прямом эфире, используя весь функционал
+видеостудии.
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Выведите дистанционное обучение на новый уровень!
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Студия всегда готова к работе. Преподаватель просто нажимает кнопку и начинает
+                                        записывать материал. Останавливает запись, самостоятельно удаляет неудачные
+                                        моменты.
+                                    </li>
+                                </ul>
+                                <div class="d-grid"><a class="btn my-btn" href="#contact">Выбрать решение</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4 order-lg-1" id="webinar">
+                        <div class="card mb-5 mb-xl-0">
+                            <img src="./assets/img/webinar2.jpg " class="card-img-top" alt="">
+                            <div class="card-body p-5">
+                                <div class="small text-uppercase fw-bold text-muted">Для проведения <br/> вебинаров</div>
+                                <ul class="list-unstyled mb-4 text-justify">
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Проводите вебинары на новом уровне качества
+и эффективности.
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Профессиональные свет, звук, камера и уникальные возможности.
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Вы будете отличаться! Сможете легче вовлекать, быть интереснее и
+понятнее для ваших слушателей.
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Получайте
+максимум эффективности! Для работы с LogoVision нужен только спикер,
+без дополнительных расходов на команду.
+                                    </li>
+                                    
+                                </ul>
+                                <div class="d-grid"><a class="btn my-btn" href="#contact">Выбрать решение</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pricing card enterprise-->
+                    <div class="col-lg-6 col-xl-4 order-lg-3" id="corpedu">
+                        <div class="card">
+                            <img src="./assets/img/corporate2.jpg " class="card-img-top" alt="">
+                            <div class="card-body p-5">
+                                <div class="small text-uppercase fw-bold text-muted">Для внутреннего корпоративного образования</div>
+                                <ul class="list-unstyled mb-4 text-justify">
                                     <li class="mb-2 text-justify">
-                                        <i class="bi bi-check text-primary "></i>
-                                        Создавайте профессиональные видеокурсы для обучения персонала без команды и монтажа.
+                                        <i class="bi bi-check text-primary "></i> Создавайте видеокурсы для обучения персонала без команды и монтажа.
                                     </li>
                                     <li class="mb-2 text-justify">
                                         <i class="bi bi-check text-primary"></i>
@@ -421,113 +527,30 @@
 вовлеченность сотрудников в учебный материал и повысить эффективность
 процесса внутреннего обучения.
                                     </li>
-                                </ul>
-                                <div class="d-grid"><a class="btn my-btn" href="corp.html">Выбрать план</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-4 order-lg-1">
-                        <div class="card mb-5 mb-xl-0">
-                            <img src="./assets/img/webinar2.jpg " class="card-img-top" alt="">
-                            <div class="card-body p-5">
-                                <div class="small text-uppercase fw-bold text-muted">Для проведения <br/> вебинаров</div>
-                                <ul class="list-unstyled mb-4 text-justify">
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        Проводите вебинары на новом уровне качества
-и эффективности, используя LogoVision.
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        Профессиональные свет, звук, камера и уникальные возможности, которых
-не дает ни одно другое решение.
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        Вы будете отличаться! Сможете легче вовлекать, быть интереснее и
-понятнее для ваших слушателей, благодаря LogoVision!
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        Получайте
-максимум эффективности! Для работы с LogoVision нужен только спикер,
-без дополнительных расходов на команду.
-                                    </li>
+                                    
+                                    
                                     
                                 </ul>
-                                <div class="d-grid"><a class="btn my-btn" href="#contact">Выбрать план</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Pricing card enterprise-->
-                    <div class="col-lg-6 col-xl-4 order-lg-3">
-                        <div class="card">
-                            <img src="./assets/img/corporate2.jpg " class="card-img-top" alt="">
-                            <div class="card-body p-5">
-                                <div class="small text-uppercase fw-bold text-muted">Для внутреннего корпоративного образования</div>
-                                <ul class="list-unstyled mb-4 text-justify">
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        Создавайте видеокурсы профессионального качества без команды и
-монтажа.
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        Проводите живые online занятия, используя весь функционал
-видеостудии.
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        Выведите дистанционное обучение на новый уровень!
-                                    </li>
-                                    
-                                </ul>
-                                <div class="d-grid"><a class="btn my-btn" href="#contact">Выбрать план</a></div>
+                                <div class="d-grid"><a class="btn my-btn" href="#contact">Выбрать решение</a></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Testimonials-->
-        <!-- <section class="testimonials text-center bg-light">
-            <div class="container">
-                <h2 class="mb-5">What people are saying...</h2>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                            <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-1.jpg" alt="..." />
-                            <h5>Margaret E.</h5>
-                            <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                            <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-2.jpg" alt="..." />
-                            <h5>Fred S.</h5>
-                            <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                            <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-3.jpg" alt="..." />
-                            <h5>Sarah W.</h5>
-                            <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
+        
         <!-- About section-->
         <section id="about" class="bg-light "> 
             <div class="container  scroll px-4">
                 <div class="row gx-4">
                     <div class="col-lg-12 col-xl-6 col-xxl-6">
                         <h2>О нас</h2>
-                        <h4>Актуальная информация о компании
-                        </h4>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        <p class="lead text-justify">
+
+                            Видеостудия LogoVision это новый, инновационный продукт компании ДНК-ТВ. <br/>Корпорация DNK-Казахстан – лидер на рынке системной интеграции в Республике Казахстан. <br/>
+
+С момента основания, Корпорация DNK-Казахстан стремительно захватила лидирующие позиции в отрасли. Клиентский портфель компании насчитывает свыше 500 контрагентов в Казахстане и соседних республиках, среди которых все государственные и коммерческие телеканалы, радиовещательные комплексы, продакшн-студии, медиацентры и пресс-центры, учебные заведения и культурные учреждения.
+                        </p>
                         <a class="btn my-btn btn-lg px-5 me-sm-3" href="http://dnk.kz/home.html">Перейти на сайт</a>
                     </div>
                     <div class="col-lg-6 col-xl-6 col-xxl-6 d-none d-xl-block text-center">
@@ -550,7 +573,7 @@
                     </div>
                     <div class="row gx-5 justify-content-center">
                         <div class="col-lg-8 col-xl-6">
-                            <form id="contactForm" action="https://formspree.io/f/mrgradrz" method="POST">
+                            <form id="contactForm" action="https://formspree.io/f/meqvpyea" method="POST">
                                 <!-- Name input-->
                                 <div class="form-floating mb-3">
                                     <input class="form-control" id="name" type="text" placeholder="Enter your name..." name="Name" required />
@@ -609,15 +632,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
-                        <!-- <ul class="list-inline mb-2">
-                            <li class="list-inline-item"><a href="#about">About</a></li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Contact</a></li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Terms of Use</a></li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Privacy Policy</a></li>
-                        </ul> -->
+                       
                         <p class="text-muted small mb-4 mb-lg-0">&copy; LogoVision.kz 2021. All Rights Reserved.</p>
                     </div>
                     <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
@@ -626,10 +641,10 @@
                                 <a href=""><i class="bi-facebook text-dark fs-3"></i></a>
                             </li>
                             <li class="list-inline-item">
-                                <a href=""><i class="bi-whatsapp text-dark fs-3"></i></a>
+                                <a href="https://wa.me/77076663898"><i class="bi-whatsapp text-dark fs-3"></i></a>
                             </li>
                             <li class="list-inline-item">
-                                <a href=""><i class="bi-youtube text-dark fs-3"></i></a>
+                                <a href="https://www.youtube.com/channel/UCts2YcHoFMaWJ8KHkjJSLiQ/featured"><i class="bi-youtube text-dark fs-3"></i></a>
                             </li>
                             <li class="list-inline-item">
                                 <a href="https://www.instagram.com/logovision.kz/"><i class="bi-instagram text-dark fs-3"></i></a>
@@ -641,7 +656,6 @@
         </footer>
      
         <!-- whatsapp button -->
-        <!-- https://chatwith.io/s/sham -->
         <!-- https://wa.me/<number> -->
         <a href="https://wa.me/77076663898"
          
